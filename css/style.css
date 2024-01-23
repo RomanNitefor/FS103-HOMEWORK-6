@@ -49,10 +49,10 @@ li {
 
 .container {
   width: 100%;
-  max-width: 1158px;
+  max-width: 352px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 /** ----------НОВА СЕКЦІЯ header---------- **/
@@ -229,11 +229,14 @@ li {
   background-color: #404bbf;
 }
 
-/** ----------НОВА СЕКЦІЯ features---------- **/
+/** ----------НОВА СЕКЦІЯ features for mobile---------- **/
 
 .features {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .visually-hidden {
@@ -252,13 +255,14 @@ li {
 
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .features-item {
-  flex-basis: calc((100% - 72px) / 4);
+  /* flex-basis: calc((100% - 72px) / 4); */
 }
-.features-container-icon {
+/* .features-container-icon {
   display: flex;
   width: 264px;
   height: 112px;
@@ -268,25 +272,88 @@ li {
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
-}
+} */
 
 .features-icon {
 }
 
 .features-item-title {
   color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
+  /* font-size: 20px; */
+  font-size: 36px;
+  /* font-weight: 500; */
+  font-style: normal;
+  font-weight: 700;
+  /* line-height: 1.2; */
+  line-height: 1.1;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .features-item-text {
   color: #434455;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+/** ----------НОВА СЕКЦІЯ features for tablet---------- **/
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+  .features-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+/** ----------НОВА СЕКЦІЯ features for decktop---------- **/
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+  .features-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .features-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .features-container-icon {
+    display: flex;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid var(--LIGHT-SLATE, #8e8f99);
+    background: var(--CLOUD, #f4f4fd);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .features-item-title {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    text-align: center;
+  }
 }
 
 /** ----------НОВА СЕКЦІЯ TEAM---------- **/
