@@ -167,12 +167,15 @@ li {
   color: #404bbf;
 }
 
-/** ----------НОВА СЕКЦІЯ HERO---------- **/
+/** ----------НОВА СЕКЦІЯ HERO for mobile---------- **/
 .hero {
-  width: 1440px;
+  /* width: 1440px;
+  max-width: 1440px; */
   margin: 0 auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  /* padding-top: 188px;
+  padding-bottom: 188px; */
+  padding-top: 72px;
+  padding-bottom: 72px;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -182,7 +185,6 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
 }
 
 .hero-containet {
@@ -194,9 +196,9 @@ li {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  margin-bottom: 48px;
-  max-width: 496px;
-  max-height: 120px;
+  /* margin-bottom: 48px; */
+  /* max-width: 496px;
+  max-height: 120px; */
   margin: 0 auto;
 }
 
@@ -216,7 +218,7 @@ li {
   display: block;
   min-width: 169px;
   margin: 0 auto;
-  margin-top: 48px;
+  margin-top: 72px;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -229,7 +231,7 @@ li {
   background-color: #404bbf;
 }
 
-/** ----------НОВА СЕКЦІЯ features for mobile---------- **/
+/** ----------НОВА СЕКЦІЯ for mobile---------- **/
 
 .features {
   /* padding-top: 120px;
@@ -276,6 +278,9 @@ li {
 
 .features-icon {
 }
+.features-container-icon {
+  display: none;
+}
 
 .features-item-title {
   color: #2e2f42;
@@ -300,12 +305,24 @@ li {
   letter-spacing: 0.02em;
 }
 
-/** ----------НОВА СЕКЦІЯ features for tablet---------- **/
+/** ----------НОВА СЕКЦІЯ for tablet---------- **/
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+  .hero-title {
+    width: 496px;
+  }
+
+  .hero-button {
+    margin-top: 36px;
+  }
+
   .features-list {
     display: flex;
     flex-wrap: wrap;
@@ -320,6 +337,13 @@ li {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+  }
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  .hero-button {
+    margin-top: 48px;
   }
   .features-list {
     display: flex;
