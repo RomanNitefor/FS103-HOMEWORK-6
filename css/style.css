@@ -502,13 +502,20 @@ li {
 
 .footer {
   background: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 72px;
+  /* align-items: baseline; */
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-link {
@@ -520,6 +527,7 @@ li {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 }
 
 .footer-link-span {
@@ -530,16 +538,24 @@ li {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 264px;
+  /* max-width: 264px;
   max-height: 72px;
-  margin-top: 18px;
-}
-
-.footer-icon {
+  margin-top: 18px; */
 }
 
 .footer-logo {
-  margin-right: 120px;
+  /* margin-right: 120px; */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 288px;
+}
+
+.footer-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-title-menu {
@@ -548,9 +564,9 @@ li {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 16px;
   align-items: center;
 }
+
 .footer-icon-list {
   display: flex;
   gap: 16px;
@@ -582,7 +598,11 @@ li {
 }
 
 .footer-subscribe {
-  margin-left: 80px;
+  /* margin-left: 80px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 .footer-subscribe-text {
   color: #fff;
@@ -591,22 +611,27 @@ li {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 16px;
 }
 .footer-form {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   gap: 24px;
 }
 .footer-input {
-  width: 268px;
+  /* width: 268px; */
+  width: 288px;
   height: 40px;
-  border-radius: 4px;
+  /* border-radius: 4px;
   border: 1px solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+  border: 1px solid var(--WHITE, #fff);
+  opacity: 0.3;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background: #2e2f42;
   padding: 16px 8px;
   flex-shrink: 0;
-  width: 264px;
   background-color: transparent;
   font-size: 12px;
   line-height: 2;
@@ -635,8 +660,10 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 16px;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
 }
 .footer-submit-btn:hover {
   background-color: #404bbf;
@@ -664,9 +691,12 @@ li {
   pointer-events: auto;
 }
 .modal {
-  padding: 72px 24px 24px 24px;
+  /* padding: 72px 24px 24px 24px;
   width: 408px;
-  min-height: 584px;
+  min-height: 584px; */
+  width: 288px;
+  min-height: 623px;
+  padding: 72px 16px 24px 16px;
   border-radius: 4px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -804,6 +834,8 @@ li {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
 }
 
 .check-text a {
@@ -855,13 +887,16 @@ li {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 16px 32px;
   border: none;
-  margin-left: 95px;
+  /* margin-left: 95px; */
+  margin-left: 44px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-btn:focus,
 .modal-form-btn:hover {
   background-color: #404bbf;
+}
+.check-text-only {
 }
 
 /** ----------НОВА СЕКЦІЯ for tablet---------- **/
@@ -901,6 +936,42 @@ li {
 
   .portfolio-list-item {
     flex-basis: calc((100% - 24px) / 2);
+  }
+  .footer-container {
+    flex-direction: row;
+    gap: 72px 24px;
+    margin: 0 auto;
+    justify-content: unset;
+    align-items: baseline;
+  }
+  .footer-text {
+    max-width: 264px;
+    max-height: 72px;
+  }
+  .footer-logo {
+    align-items: flex-start;
+  }
+  .footer-icon {
+    align-items: flex-start;
+  }
+  .footer-subscribe {
+    align-items: flex-start;
+  }
+  .footer-form {
+    flex-direction: row;
+  }
+  .footer-input {
+    width: 264px;
+  }
+  .footer-subscribe-text {
+  }
+  .footer-subscribe {
+    justify-content: flex-start;
+  }
+  .modal{
+  padding: 72px 24px 24px 24px;
+  width: 408px;
+  min-height: 584px;
   }
 }
 
@@ -968,5 +1039,11 @@ li {
 
   .portfolio-list-item {
     flex-basis: calc((100% - 48px) / 3);
+  }
+  .footer-container {
+    gap: 80px;
+  }
+  .footer-logo {
+    margin-right: 40px;
   }
 }
