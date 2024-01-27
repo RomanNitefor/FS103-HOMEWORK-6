@@ -836,6 +836,7 @@ li {
   letter-spacing: 0.04em;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .check-text a {
@@ -852,6 +853,7 @@ li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -896,7 +898,7 @@ li {
 .modal-form-btn:hover {
   background-color: #404bbf;
 }
-.check-text-only {
+.check-text-span {
 }
 
 /** ----------НОВА СЕКЦІЯ for tablet---------- **/
@@ -968,10 +970,10 @@ li {
   .footer-subscribe {
     justify-content: flex-start;
   }
-  .modal{
-  padding: 72px 24px 24px 24px;
-  width: 408px;
-  min-height: 584px;
+  .modal {
+    padding: 72px 24px 24px 24px;
+    width: 408px;
+    min-height: 584px;
   }
 }
 
