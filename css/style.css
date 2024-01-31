@@ -461,6 +461,7 @@ li {
   line-height: 1.1;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .features-item-text {
@@ -1121,6 +1122,9 @@ li {
   }
   .features-item {
     flex-basis: calc((100% - 24px) / 2);
+  }
+  .features-item-title {
+    text-align: unset;
   }
 
   .features-item-text {
