@@ -1237,6 +1237,7 @@ li {
   }
 
   .hero {
+    max-width: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
     background-image: linear-gradient(
